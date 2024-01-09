@@ -6,11 +6,13 @@ import Authenticate from "./components/Authenticate";
 
 function App() {
 
+  const [token, setToken] = useState(null);
+
   return (
     <div>
-      <h1>Welcome to My App</h1>
-      <SignUpForm />
-      <Authenticate />
+      <h1>React Form</h1>
+      <SignUpForm setToken={setToken} />
+      <Authenticate token={token} />
     </div>
   )
 }
